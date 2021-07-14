@@ -5,6 +5,8 @@ import { SvgProps } from "../types";
 const Icon: React.FC<SvgProps> = (props) => {
   return (
     <Svg viewBox="0 0 32 32" {...props}>
+      <image width="32" height="32" href="images/logo.png"/>
+{/* 
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -28,7 +30,7 @@ const Icon: React.FC<SvgProps> = (props) => {
       <path
         d="M23.1111 18.9091C23.1111 20.248 22.3875 21.3333 21.4949 21.3333C20.6024 21.3333 19.8788 20.248 19.8788 18.9091C19.8788 17.5702 20.6024 16.4849 21.4949 16.4849C22.3875 16.4849 23.1111 17.5702 23.1111 18.9091Z"
         fill="#633001"
-      />
+      /> */}
     </Svg>
   );
 };
