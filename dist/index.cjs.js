@@ -2091,7 +2091,8 @@ var links = [
     // {
     //   label: "NFT",
     //   icon: "NftIcon",
-    //   href: "/nft",
+    //   href: "/#",
+    //   isSoon: true,
     // },
     // {
     //   label: "Profile & Teams",
@@ -2259,7 +2260,7 @@ var MenuEntry = styled__default['default'].div(templateObject_3$2 || (templateOb
     return theme.colors.textSubtle;
 }, function (_a) {
     var theme = _a.theme;
-    return theme.colors.tertiary;
+    return theme.colors.background;
 }, rainbowAnimation, function (_a) {
     var theme = _a.theme;
     return theme.colors.gradients.bubblegum;
@@ -2327,8 +2328,10 @@ var PanelBody = function (_a) {
         }
         return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
             React__default['default'].createElement(MenuLink, { href: entry.href, onClick: handleClick },
-                iconElement,
-                React__default['default'].createElement(LinkLabel, { isPushed: isPushed }, entry.label))));
+                React__default['default'].createElement(React__default['default'].Fragment, null,
+                    iconElement,
+                    React__default['default'].createElement(LinkLabel, { isPushed: isPushed }, entry.label)),
+                entry.isSoon ? React__default['default'].createElement(Tag, { outline: true }, "SOON") : React__default['default'].createElement(React__default['default'].Fragment, null))));
     })));
 };
 var templateObject_1$9;
@@ -2801,6 +2804,7 @@ var baseColors = {
     secondary: "#08cc56",
     success: "#31D0AA",
     warning: "#FFB237",
+    white: "#FFF",
 };
 var brandColors = {
     binance: "#F0B90B",
