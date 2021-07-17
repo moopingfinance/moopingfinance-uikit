@@ -2226,7 +2226,7 @@ var socials = [
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/pancakeswap",
+        href: "https://twitter.com/FinanceMooping",
     },
 ];
 var MENU_HEIGHT = 64;
