@@ -36,7 +36,8 @@ export const links = [
   // {
   //   label: "NFT",
   //   icon: "NftIcon",
-  //   href: "/nft",
+  //   href: "/#",
+  //   isSoon: true,
   // },
   // {
   //   label: "Profile & Teams",

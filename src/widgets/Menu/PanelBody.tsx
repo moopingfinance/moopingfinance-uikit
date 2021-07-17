@@ -7,12 +7,13 @@ import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import { PanelProps, PushedProps } from "./types";
+import { Tag } from "../../components/Tag";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
 }
 
-const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
+const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
 const Container = styled.div`
   display: flex;
@@ -56,10 +57,17 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
           );
         }
         return (
-          <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
+          <MenuEntry
+            key={entry.label}
+            isActive={entry.href === location.pathname}
+            className={calloutClass}
+          >
             <MenuLink href={entry.href} onClick={handleClick}>
-              {iconElement}
-              <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
+              <>
+                {iconElement}
+                <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
+              </>
+              {entry.isSoon ? <Tag outline>SOON</Tag> : <></>}
             </MenuLink>
           </MenuEntry>
         );
